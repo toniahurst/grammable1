@@ -1,7 +1,7 @@
 require 'rails_helper'
-
 RSpec.describe GramsController, type: :controller do
-  describe "grams#destroy action" 
+
+  describe "grams#destroy action" do
     it "shouldn't allow users who didn't create the gram to destroy it" do
       gram = FactoryBot.create(:gram)
       user = FactoryBot.create(:user)
@@ -183,4 +183,4 @@ RSpec.describe GramsController, type: :controller do
       expect(gram_count).to eq Gram.count
     end
 end
-## end
+end
